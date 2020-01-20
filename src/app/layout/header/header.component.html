@@ -1,0 +1,12 @@
+<header class="header">
+    <h1 class="header-title">
+        <fa-icon [icon]="faAngular" class="mr-1"></fa-icon>Todo Angular
+    </h1>
+    <ul class="header-links">
+        <li *ngIf="authenticated"><a class="header-link" (click)="signOut.emit()" href="#">Sign out</a></li>
+        <li><a class="header-link" target="_blank" href="https://github.com/iwakoshi/todo-angular">
+                <fa-icon [icon]="faGithub"></fa-icon>
+            </a>
+        </li>
+    </ul>
+</header>

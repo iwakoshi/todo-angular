@@ -1,0 +1,10 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  overflow: hidden;
+  line-height: 2rem;
+  &-link {
+    color: inherit;
+  }
+}

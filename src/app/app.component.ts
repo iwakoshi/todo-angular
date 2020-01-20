@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 
+import { AuthService } from './shared/services/auth.service';
+
 @Component({
   selector: 'todo-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'todo-angular';
+  constructor(public auth: AuthService) { }
 }
