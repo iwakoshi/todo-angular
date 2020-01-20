@@ -1,0 +1,83 @@
+.task {
+  &-input {
+    height: 61px;
+    color: #fff;
+    background: transparent;
+    outline: none;
+    border: 0;
+    border-bottom: 1px dotted #666;
+    width: 100%;
+    font-family: inherit;
+    font-size: 2rem;
+  }
+  &-edit {
+    color: #fff;
+    background: transparent;
+    outline: none;
+    border: 0;
+    width: 100%;
+    font-family: inherit;
+    font-size: 1.3rem;
+  }
+  &-form {
+    margin-bottom: 1rem;
+  }
+  &-button {
+    outline: none;
+    cursor: pointer;
+    border: 0;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    background: #2a2a2a;
+    font-size: 1rem;
+    color: #555;
+    &:hover {
+      color: #999;
+    }
+  }
+  &-line {
+    border-bottom: 1px dotted #666;
+    line-height: 3rem;
+  }
+  &-finished {
+    color: #666;
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+    &:after {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      border-top: 2px solid #85bf6b;
+      width: 0;
+      height: 46%;
+      content: "";
+      color: #666;
+      width: 100%;
+    }
+  }
+}
+
+li {
+  float: left;
+
+  &:not(:first-child) {
+    margin-left: 12px;
+  }
+
+  &:not(:first-child):before {
+    padding-right: 12px;
+    content: "/";
+    font-weight: 300;
+  }
+}
+
+a {
+  color: #999;
+  text-decoration: none;
+
+  &.active {
+    color: #fff;
+  }
+}

@@ -1,0 +1,33 @@
+<input (keyup.escape)="clear()" (keyup.enter)="create()" [formControl]="description" autocomplete="off" autofocus
+    #createDescription class="task-input mb-1 mt-5" name="description" placeholder="What needs to be done?" required
+    type="text">
+<div style="display: flex; flex-direction: column;">
+    <div *ngFor="let task of tasks$ | async" class="task-line" style="display: flex;justify-content: space-between;">
+        <div *ngIf="editing !== task" style="color: #fff;">
+            <button (click)="toggleStatus(task)" [style.color]="task.finished?'#85bf6b':null"
+                aria-label="Mark task as completed" class="task-button" type="button">
+                <fa-icon [icon]="faCheck"></fa-icon>
+            </button>
+            <span class="ml-1" [class.task-finished]="task.finished" [innerText]="task.description"></span>
+        </div>
+        <div *ngIf="editing === task" style="width: 100%;">
+            <input (keyup.escape)="clear()" [formControl]="selectedDescription" autocomplete="off" #editDescription
+                class="task-edit ml-1" name="description" [placeholder]="selectedDescription.value.description" required
+                type="text">
+        </div>
+        <div>
+            <button *ngIf="editing !== task" aria-label="Edit task title" class="task-button" type="button"
+                (click)="startEdit(task)" style="margin-right: .5rem;">
+                <fa-icon [icon]="faPen"></fa-icon>
+            </button>
+            <button *ngIf="editing !== task" aria-label="Delete task" class="task-button" type="button"
+                (click)="delete(task)">
+                <fa-icon [icon]="faTrashAlt"></fa-icon>
+            </button>
+            <button *ngIf="editing === task" aria-label="Save task" class="task-button" type="button"
+                (click)="stopEdit(task)">
+                <fa-icon [icon]="faSave"></fa-icon>
+            </button>
+        </div>
+    </div>
+</div>

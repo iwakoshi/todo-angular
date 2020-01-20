@@ -2,7 +2,7 @@
 
 ## Todo app with Angular and Firebase
 
-A Todo app built with Angular and Firebase. Try the demo at iwakoshi.github.io/todo-angular.
+A Todo app built with Angular and Firebase. Try the demo at https://iwakoshi.github.io/todo-angular.
 
 ## Stack
 
