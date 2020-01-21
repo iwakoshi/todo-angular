@@ -11,6 +11,7 @@ A Todo app built with Angular and Firebase. Try the demo at https://iwakoshi.git
 - Firebase
 - SASS
 - Typescript
+- FontAwesome
 
 ## Quick Start
 
