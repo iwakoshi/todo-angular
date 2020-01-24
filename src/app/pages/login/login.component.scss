@@ -1,0 +1,22 @@
+.heading {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 300;
+    text-align: center;
+}
+
+.sign-in-button {
+    margin-bottom: 1rem;
+    outline: none;
+    border: 1px solid #2d2d2d;
+    width: 100%;
+    font-size: 1rem;
+    line-height: 3rem;
+    color: #999;
+    background: transparent;
+    cursor: pointer;
+    &:hover {
+        border: 1px solid #2d2d2d;
+        background-color: rgba(0, 0, 0, 0.29);
+    }
+}
